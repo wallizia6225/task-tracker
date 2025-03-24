@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | Angular Docs Theme</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1976D2, #1565C0);
+            color: #fff;
+        }
+
+        .container {
+            width: 350px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container h2 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:not(:placeholder-shown) ~ label {
+            top: 10px;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #FF9800;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #F57C00;
+        }
+
+        .footer {
+            margin-top: 1rem;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #FFEB3B;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hide Register Form Initially */
+        #registerForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Register Form -->
+        <div id="registerForm">
+            <h2>Create an Account</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" id="register-username" required placeholder=" ">
+                    <label for="register-username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="register-email" required placeholder=" ">
+                    <label for="register-email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="register-password" required placeholder=" ">
+                    <label for="register-password">Password</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="footer">Already have an account?</p>
+        </div>
+    </div>
+</body>
+</html>
